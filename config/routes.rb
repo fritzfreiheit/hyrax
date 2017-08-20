@@ -127,6 +127,7 @@ Hyrax::Engine.routes.draw do
         put '', action: :update
         put :remove_member
       end
+      resource :permission_template
     end
     resources :profiles, only: [:show, :edit, :update]
   end

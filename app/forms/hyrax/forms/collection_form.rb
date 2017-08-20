@@ -34,6 +34,14 @@ module Hyrax
         @repository = repository
       end
 
+      def permission_template
+        @permission_template = Hyrax::PermissionTemplate.first
+      end
+
+      def model_name
+        Collection.model_name
+      end
+
       # @return [Hash] All FileSets in the collection, file.to_s is the key, file.id is the value
       def select_files
         Hash[all_files_with_access]
